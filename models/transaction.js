@@ -8,11 +8,13 @@ const mongoose = require("mongoose");
 //         console.log("error", err);
 //     })
 
-const databSchema = new mongoose.Schema({
-    Date: Date,
-    payment: String
+const transactionSchema = new mongoose.Schema({
+    Date:Date,
+    amount:Number,
+    Description:String,
+    comment:String
 });
 
-const Datab = mongoose.model("Datab", databSchema);
+const Transaction = mongoose.model("Transaction", transactionSchema);
 
-module.exports = Datab;
+module.exports = Transaction;
